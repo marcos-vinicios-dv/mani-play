@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const CardContainer = styled.li`
   margin-top: 1rem;
   padding: 1rem 2.95rem;
-  width: calc(75vw);
   list-style: none;
 
   background-color: var(--gray-50);
@@ -36,6 +35,13 @@ export const BoxMain = styled.div`
       color: var(--gray-200);
     }
   }
+
+  img {
+    max-width: 76px;
+    max-height: 76px;
+
+    border-radius: 5px;
+  }
 `;
 
 export const BoxSub = styled.div`
@@ -54,7 +60,7 @@ export const BoxSub = styled.div`
       color: var(--gray-400);
       width: 24px;
       height: 24px;
-      transition: 0.2s ease;
+      transition: 0.3s ease;
     }
 
     &:hover {
@@ -68,9 +74,7 @@ export const BoxSub = styled.div`
     svg {
       fill: var(--gray-50);
       stroke: var(--gray-400);
-      stroke-width: 2;
-
-      transition: 0.2s ease;
+      stroke-width: 1.5;
     }
     &:hover {
       svg {

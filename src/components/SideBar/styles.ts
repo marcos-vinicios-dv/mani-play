@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const SideContainer = styled.aside`
   width: 20%;
@@ -21,15 +22,12 @@ export const NavLinks = styled.nav`
     li {
       display: flex;
       align-items: center;
-      /* margin: 0 0 0 -2.5rem; */
 
       & + li {
         margin-top: 1rem;
       }
 
       span {
-        font: 500 1.2rem 'Poppins';
-        color: var(--gray-700);
       }
 
       svg {
@@ -42,4 +40,13 @@ export const NavLinks = styled.nav`
       }
     }
   }
+`;
+
+type RouterLinkProps = {
+  active: number;
+};
+
+export const RouterLink = styled(Link)<RouterLinkProps>`
+  font: 500 1.2rem 'Poppins';
+  color: ${({ active }) => (active ? 'var(--pink)' : 'var(--gray-700)')};
 `;

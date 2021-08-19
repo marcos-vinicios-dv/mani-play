@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.main`
   padding: 1.6rem 2.15rem;
+  width: 80%;
+  height: 100vh;
+  overflow-y: auto;
 
   h2 {
     color: var(--gray-700);
@@ -17,5 +20,9 @@ export const Container = styled.main`
   ul {
     width: 100%;
     padding: 1rem 0;
+  }
+
+  @media (min-width: 1420px) {
+    width: 90%;
   }
 `;

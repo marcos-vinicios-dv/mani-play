@@ -1,9 +1,7 @@
-import { BiHeart } from 'react-icons/bi';
-import { BsPlay } from 'react-icons/bs';
 import { FiPlay } from 'react-icons/fi';
+import { HiHeart } from 'react-icons/hi';
 
 import Cover from '../../assets/images/Cover.png';
-import { HeartCustom } from '../../assets/SVG/HeartCustom';
 import { CardContainer, BoxMain, BoxSub } from './styles';
 
 interface CardSongProps {
@@ -36,7 +34,7 @@ export const CardSong = () => {
           <FiPlay />
         </button>
         <button>
-          <HeartCustom />
+          <HiHeart />
         </button>
       </BoxSub>
     </CardContainer>

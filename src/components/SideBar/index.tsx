@@ -1,25 +1,33 @@
 import { BiHomeAlt, BiHeart } from 'react-icons/bi';
+import { useLocation } from 'react-router-dom';
 
 import Logo from '../../assets/SVG/Logo.svg';
 
-import { SideContainer, NavLinks } from './styles';
+import { SideContainer, NavLinks, RouterLink } from './styles';
 
 export const SideBar = () => {
+  const { pathname } = useLocation();
+
   return (
     <SideContainer>
       <img src={Logo} alt="Ícone play com text ManiPlay escrito ao lado" />
-
-      {/* Passar is Active para link router e verificar no styled par mudar cor de texto */}
 
       <NavLinks>
         <ul>
           <li>
             <BiHomeAlt />
-            <span>Home</span>
+            <RouterLink to="/" active={pathname === '/' ? 1 : 0}>
+              Home
+            </RouterLink>
           </li>
           <li>
             <BiHeart />
-            <span>Favoritos</span>
+            <RouterLink
+              to="/favorites"
+              active={pathname === '/favorites' ? 1 : 0}
+            >
+              Favoritos
+            </RouterLink>
           </li>
         </ul>
       </NavLinks>

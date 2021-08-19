@@ -34,6 +34,7 @@ export default createGlobalStyle`
 
   body {
     background-color: #F3F5F8;
+    /* overflow-y: hidden; */
   }
 
   #root {

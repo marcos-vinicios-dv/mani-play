@@ -1,14 +1,16 @@
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import GlobalStyles from './styles/global';
 import { SideBar } from './components/SideBar';
-import { Home } from './pages/Home';
+import { Routes } from './router/routes';
 
 const App = () => {
   return (
-    <>
+    <Router>
       <GlobalStyles />
       <SideBar />
-      <Home />
-    </>
+      <Routes />
+    </Router>
   );
 };
 
