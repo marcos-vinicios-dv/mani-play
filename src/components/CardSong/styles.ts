@@ -22,6 +22,7 @@ export const CardContainer = styled.li`
 `;
 
 export const BoxMain = styled.div`
+  width: 40%;
   display: flex;
 
   span {
@@ -37,4 +38,45 @@ export const BoxMain = styled.div`
   }
 `;
 
-export const BoxSub = styled.div``;
+export const BoxSub = styled.div`
+  width: 50%;
+  font-weight: 600;
+  color: var(--gray-400);
+
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    background: none;
+    border: none;
+
+    svg {
+      color: var(--gray-400);
+      width: 24px;
+      height: 24px;
+      transition: 0.2s ease;
+    }
+
+    &:hover {
+      svg {
+        color: var(--pink);
+      }
+    }
+  }
+
+  button:last-child {
+    svg {
+      fill: var(--gray-50);
+      stroke: var(--gray-400);
+      stroke-width: 2;
+
+      transition: 0.2s ease;
+    }
+    &:hover {
+      svg {
+        fill: var(--pink);
+        stroke: var(--pink);
+      }
+    }
+  }
+`;

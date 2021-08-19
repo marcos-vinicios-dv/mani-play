@@ -9,6 +9,8 @@ export const SideBar = () => {
     <SideContainer>
       <img src={Logo} alt="Ícone play com text ManiPlay escrito ao lado" />
 
+      {/* Passar is Active para link router e verificar no styled par mudar cor de texto */}
+
       <NavLinks>
         <ul>
           <li>
