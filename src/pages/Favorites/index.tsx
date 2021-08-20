@@ -7,11 +7,11 @@ export const Favorites = () => {
       <h2>Meus Favoritos</h2>
       <span>10 Musicas</span>
 
-      <ul>
+      {/* <ul>
         <CardSong />
         <CardSong />
         <CardSong />
-      </ul>
+      </ul> */}
     </Container>
   );
 };

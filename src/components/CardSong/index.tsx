@@ -1,34 +1,46 @@
 import { FiPlay } from 'react-icons/fi';
 import { HiHeart } from 'react-icons/hi';
 
-import Cover from '../../assets/images/Cover.png';
 import { CardContainer, BoxMain, BoxSub } from './styles';
 
 interface CardSongProps {
-  position: string;
-  url_image_album: string;
-  url_musica: string;
-  artist: string;
-  durations: string;
+  position: number;
+  duration: string;
+  link: string;
+  preview: string;
+  title_short: string;
+  album_cover: string;
+  artist_name: string;
   unfavorite?: boolean;
 }
-// {}: CardSongProps
-export const CardSong = () => {
+
+export const CardSong = ({
+  position,
+  duration,
+  link,
+  // preview,
+  artist_name,
+  title_short,
+  album_cover,
+}: // unfavorite,
+CardSongProps) => {
   return (
     <CardContainer>
-      <span>01</span>
+      <span>{position}</span>
 
       <BoxMain>
-        <img src={Cover} alt="Imagem do álbum" />
+        <img src={album_cover} alt="Imagem do álbum" />
         <span>
-          <h3>Meu Pedaço de pecado</h3>
-          <a href="http://localhost:3000/">Ver completa</a>
+          <h3>{title_short}</h3>
+          <a href={link} target="_blank" rel="noreferrer">
+            Ver completa
+          </a>
         </span>
       </BoxMain>
 
       <BoxSub>
-        <span>João Gomes</span>
-        <span>2:15</span>
+        <span>{artist_name}</span>
+        <span>{duration}</span>
 
         <button>
           <FiPlay />
