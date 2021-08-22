@@ -20,12 +20,14 @@ export const SearchBar = ({ onSearch }: SearchBarProps) => {
 
   return (
     <SearchContainer>
-      <BiSearch />
       <input
         ref={inputSearch}
         type="text"
         placeholder="Álbum, Artista ou Título"
       />
+      <button type="button">
+        <BiSearch />
+      </button>
     </SearchContainer>
   );
 };

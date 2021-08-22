@@ -26,7 +26,6 @@ export const CardSong = ({
     isPlaying,
     setIsPlaying,
     audioRef,
-    setupProgressListener,
     togglePlayPause,
     handleAddSongToFavorite,
     handleRemoveSongFromFavorite,
@@ -63,8 +62,8 @@ export const CardSong = ({
           ref={audioRef}
           src={song.preview}
           preload="metadata"
-          onLoadedMetadata={setupProgressListener}
           onPlay={() => onPlaySong(song.id)}
+          onPause={() => setIsPlaying(false)}
         />
 
         <button onClick={togglePlayPause}>

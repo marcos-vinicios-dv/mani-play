@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { api } from '../api';
+import { useState, useEffect, useCallback } from 'react';
+import { useApi } from './useApi';
 
 export interface Song {
   id: number;
@@ -13,41 +13,88 @@ export interface Song {
 
 interface useHomeData {
   searchingFor: string;
-  songs: Song[];
+  totalPlaylist: number;
+  isLoading: boolean;
+  playlist: Song[];
   handleSearch: (value: string) => Promise<void>;
+  loadMore: () => Promise<void>;
 }
 
-const formatApiData = (song, index): useHomeData => {
-  const minutes = Math.floor(song.duration / 60);
-  const seconds = song.duration % 60;
-
-  return {
-    duration_formatted: `${minutes}:${String(seconds).padStart(2, '0')}`,
-    album_cover: song.album.cover,
-    artist_name: song.artist.name,
-    ...song,
-  };
-};
-
-export const useHome = () => {
+export const useHome = (): useHomeData => {
   const [searchingFor, setSearchingFor] = useState('Mais Populares');
-  const [songs, setSongs] = useState<Song[]>([]);
+  const [playlist, setPlaylist] = useState<Song[]>([]);
+  const [totalPlaylist, setTotalPlaylist] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+  const [nextPageIndex, setNextPageIndex] = useState<string | undefined>('');
+
+  const { getMostPopularSongs, getSongsBySearch, loadMoreSongs } = useApi();
 
   useEffect(() => {
-    async function loadInitialSongs() {
-      const response = (
-        await api.get('playlist/3155776842/tracks?index=0&limit=20')
-      ).data;
-      setSongs(response.data.map(formatApiData));
+    async function loadMostPopularSongs() {
+      const { dataFormatted, next, total } = await getMostPopularSongs('0');
+
+      setNextPageIndex(next);
+      setTotalPlaylist(total);
+      setPlaylist(dataFormatted);
+      setIsLoading(false);
     }
-    loadInitialSongs();
+    loadMostPopularSongs();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleSearch = async (value: string) => {
-    const response = (await api.get(`search/track?q=${value}`)).data;
+  const handleSearch = useCallback(
+    async (value: string) => {
+      try {
+        setIsLoading(true);
+        setNextPageIndex('0');
+        const { dataFormatted, total, next } = await getSongsBySearch(
+          value,
+          '0'
+        );
 
-    setSongs(response.data.map(formatApiData));
-    setSearchingFor(`Resultados da busca por "${value}"`);
+        if (!!dataFormatted.length) {
+          setTotalPlaylist(total);
+          setPlaylist(dataFormatted);
+          setSearchingFor(`Resultados da busca por "${value}"`);
+          setIsLoading(false);
+
+          !!next && setNextPageIndex(next);
+        } else {
+          setPlaylist([]);
+          setTotalPlaylist(0);
+          setIsLoading(false);
+        }
+      } catch {
+        setSearchingFor(`Nada foi encontrado`);
+        console.log(`Erro ao fazer a busca!`);
+      }
+    },
+    [getSongsBySearch]
+  );
+
+  const loadMore = useCallback(async () => {
+    if (!isLoading && !!nextPageIndex) {
+      try {
+        const { dataFormatted, next } = await loadMoreSongs(nextPageIndex);
+        setNextPageIndex(next);
+        if (!!dataFormatted.length) {
+          setPlaylist((prevPlayList) => prevPlayList.concat(dataFormatted));
+        }
+      } catch {
+        setSearchingFor(`Nada foi encontrado`);
+        console.log(`Erro ao fazer a busca!`);
+      }
+    } else {
+      return;
+    }
+  }, [isLoading, loadMoreSongs, nextPageIndex]);
+
+  return {
+    searchingFor,
+    playlist,
+    isLoading,
+    totalPlaylist,
+    handleSearch,
+    loadMore,
   };
-  return { searchingFor, songs, handleSearch };
 };

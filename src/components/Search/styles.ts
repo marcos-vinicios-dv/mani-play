@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const SearchContainer = styled.div`
-  width: 400px;
-  padding: 0.8rem 1.34rem;
+  max-width: 500px;
+  /* padding: 0.8rem 1.34rem; */
 
   border: 2px solid var(--gray-200);
   border-radius: 30px;
@@ -17,7 +17,8 @@ export const SearchContainer = styled.div`
   }
 
   input {
-    margin-left: 1rem;
+    flex: 1;
+    margin: 0 0 0 1.2rem;
 
     background-color: transparent;
     border: none;
@@ -36,9 +37,30 @@ export const SearchContainer = styled.div`
     }
   }
 
-  transition: 0.2s ease;
+  button {
+    margin-right: -2px;
+    background: none;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    padding: 0.5rem 1.35rem;
+  }
+
+  transition: all 0.2s ease;
 
   &:focus-within {
     border-color: var(--pink);
+
+    button {
+      background: var(--pink);
+      border: var(--pink);
+
+      svg {
+        color: var(--gray-50);
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
   }
 `;

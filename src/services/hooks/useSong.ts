@@ -20,7 +20,6 @@ interface useSongData {
   setIsPlaying: Dispatch<SetStateAction<boolean>>;
   audioRef: React.MutableRefObject<HTMLAudioElement>;
   togglePlayPause: () => void;
-  setupProgressListener: () => void;
   handleAddSongToFavorite: (song: Song) => void;
   handleRemoveSongFromFavorite: (id: number) => void;
   isFavorite: (id: number) => boolean;
@@ -39,6 +38,7 @@ export const useSong = (): useSongData => {
     }
 
     if (isPlaying) {
+      audioRef.current.currentTime = 0;
       audioRef.current.volume = 0.4;
       audioRef.current.play();
     } else {
@@ -47,22 +47,26 @@ export const useSong = (): useSongData => {
     }
   }, [isPlaying]);
 
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
+  useEffect(() => {
+    try {
+      const serialState = JSON.stringify({ songs });
+      localStorage.setItem('favoriteList', serialState);
+    } catch (e) {
+      console.warn(e);
+    }
+  }, [songs]);
 
   // PROBLEMA AO PESQUISAR ENQUANTO OUVE
-  const setupProgressListener = () => {
-    audioRef.current.currentTime = 0;
-
-    audioRef.current.addEventListener('timeupdate', () => {
-      const currentTime = audioRef.current.currentTime;
-
-      if (currentTime === audioRef.current.duration) {
-        setIsPlaying(false);
-      }
-    });
-  };
+  useEffect(() => {
+    // audioRef.current.currentTime = 0;
+    // audioRef.current.addEventListener('timeupdate', () => {
+    //   const currentTime = audioRef.current.currentTime;
+    //   if (currentTime === audioRef.current.duration) {
+    //     setIsPlaying(false);
+    //   }
+    // });
+    // return () => audioRef.current.removeEventListener('timeupdate', () => {});
+  }, []);
 
   const handleAddSongToFavorite = useCallback(
     (song) => {
@@ -82,11 +86,14 @@ export const useSong = (): useSongData => {
     return songs.some((song) => id === song.id);
   };
 
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return {
     isPlaying,
     audioRef,
     togglePlayPause,
-    setupProgressListener,
     handleAddSongToFavorite,
     handleRemoveSongFromFavorite,
     setIsPlaying,
