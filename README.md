@@ -38,7 +38,7 @@
 - <a href="https://reactrouter.com/web/guides/quick-start" >react-router-dom</a> (gerencimento de rotas);
 - <a href="https://react-icons.github.io/react-icons" >react-icons</a> (pacote de icones);
 - <a href="https://www.davidhu.io/react-spinners/" >react-spinners</a> (spinners de carregamento);
-  <a href="https://immerjs.github.io/immer/" >immer</a> (manipulação de estados imutáveis).
+- <a href="https://immerjs.github.io/immer/" >immer</a> (manipulação de estados imutáveis).
 
 <br>
 
@@ -51,8 +51,8 @@
     <br> ``` cd node_modules/cors-anywhere/lib ``` , seguido de ``` npm run start ``` <br>
     <p>Nessa etapa instalamos as dependencias do projeto e iniciamos uma biblioteca chamada "cors-anywhere" que nos ajuda a lidar com um pequeno problema de compatibilidade da API.</p><br>
 - Agora em outro terminal ou uma nova aba do mesmo, vamos iniciar a aplicação propriamente dita, siga o mesmo caminho que utilizou para chegar na pasta do projeto e utilize o seguinte comando:
-<br>``` npm run start ```<br>
-Prontinho aproveite a experiência!!
+<br>``` npm run start ```<br><br>
+**Prontinho aproveite a experiência!!**
 
 ## Atenção!
 <p>O site é responsivo porém seu design não foi feito previamete construido no figma e está sujeita a mudar, foi algo feito apenas para que não quebre em telas menores.</p>
