@@ -9,7 +9,7 @@
 
 - Home:
     - SideBar
-    <img width="30%" height="40%"src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_22-14-24_RTGqye434.png?updatedAt=1629681389130" alt="Componente sidebar"></img>
+    <img width="30%" height="30%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_22-14-24_RTGqye434.png?updatedAt=1629681389130" alt="Componente sidebar"></img>
     <p>Esse componente possibilita a navegação do usuário entre as páginas disponiveis até o momento.</p>
     <br><br>
 
@@ -75,6 +75,6 @@ Assim que o processo finalizar digite:
 <br>
 Prontinho aproveite a experiência!!
 
-##Atenção!
+## Atenção!
 <p>O site é responsivo porém seu design não foi feito previamete construido no figma e está sujeita a mudar, foi algo feito apenas para que não quebre em telas menores.</p>
 
