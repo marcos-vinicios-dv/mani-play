@@ -55,13 +55,10 @@
 - Para iniciar esse app em sua máquina será necessário ter uma versão do node(LTS) instalada em sua máquina para poder rodar o projeto localmente, não se preocupe é bem simples para instalar, segue um link do site oficial:
 <br>
 <a href="https://nodejs.org/en/">Node</a>
-<br><br>
+<br>
 - Com o node já instalado basta fazer um clone do projeto ou então baixar a versão zip, depois de ja ter feito o download(descompactado) ou clonado o projeto abra o terminal e navegue até a pasta do projeto e digite os seguintes códigos:
-<br>
  ``` npm install ```
-<br>
 Assim que o processo finalizar digite:
-<br>
 ``` cd node_modules/cors-anywhere/lib ```
 <br>
 ``` npm run start ```
