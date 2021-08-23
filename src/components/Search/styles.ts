@@ -13,6 +13,7 @@ export const SearchContainer = styled.div`
     width: 18px;
     height: 18px;
     color: var(--gray-400);
+    margin-bottom: -3px;
   }
 
   input {
@@ -41,7 +42,7 @@ export const SearchContainer = styled.div`
     background: none;
     border: none;
     border-radius: 0 30px 30px 0;
-    padding: 0.5rem 1.35rem;
+    padding: 0.55rem 1.35rem;
   }
 
   transition: all 0.2s ease;

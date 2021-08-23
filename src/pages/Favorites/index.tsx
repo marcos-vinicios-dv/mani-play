@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+
 import { CardSong } from '../../components/CardSong';
 import { Song } from '../../services/hooks/useHome';
 import { State } from '../../store/modules/favorites/types';
+
 import { Container } from './styles';
 
 export const Favorites = () => {

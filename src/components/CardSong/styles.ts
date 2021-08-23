@@ -85,12 +85,22 @@ export const BoxMain = styled.div`
   span {
     margin-left: 2.15rem;
     font-weight: 600;
+
     h3 {
       color: var(--gray-700);
     }
 
     a {
       color: var(--gray-200);
+
+      transition: 0.2s ease;
+      &:hover {
+        color: var(--gray-400);
+      }
+    }
+
+    > span {
+      display: none;
     }
   }
 
@@ -122,7 +132,15 @@ export const BoxMain = styled.div`
   }
 
   @media (max-width: 600px) {
+    align-items: flex-start;
     width: 80%;
+
+    span span {
+      display: block;
+      font-size: 0.8rem;
+      margin: 0.5rem 0 0 0;
+      color: var(--gray-400);
+    }
   }
 `;
 
@@ -133,10 +151,6 @@ export const BoxSub = styled.div`
 
   position: relative;
   display: flex;
-
-  span {
-    text-align: center;
-  }
 
   span:first-child {
     flex: 1;
@@ -180,22 +194,18 @@ export const BoxSub = styled.div`
     width: auto;
     flex-direction: column;
 
-    span:first-child {
+    span {
       display: none;
     }
 
-    span {
-      margin: 0.5rem 0;
-      order: 2;
-    }
-
     button {
-      order: 3;
       margin-left: 0;
+      order: 2;
     }
 
     button:last-child {
       order: 1;
+      margin-bottom: 0.8rem;
     }
   }
 `;

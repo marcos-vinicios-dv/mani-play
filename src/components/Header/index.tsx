@@ -1,3 +1,5 @@
+import { IoClose } from 'react-icons/io5';
+import { useLocation } from 'react-router-dom';
 import { BiMenu } from 'react-icons/bi';
 import { useEffect, useState } from 'react';
 
@@ -5,8 +7,6 @@ import { NavLinks } from '../NavLinks';
 import Logo from '../../assets/SVG/Logo.svg';
 
 import { Container, ResponsiveSideBar } from './styles';
-import { IoClose } from 'react-icons/io5';
-import { useLocation } from 'react-router-dom';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

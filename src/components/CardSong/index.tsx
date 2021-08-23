@@ -2,10 +2,11 @@ import { useEffect } from 'react';
 import { FiPlay, FiPause } from 'react-icons/fi';
 import { IoClose } from 'react-icons/io5';
 import { HiHeart } from 'react-icons/hi';
+
 import { useSong } from '../../services/hooks/useSong';
+import { Song } from '../../services/hooks/useHome';
 
 import { CardContainer, BoxMain, BoxSub, ButtonFavorite } from './styles';
-import { Song } from '../../services/hooks/useHome';
 
 interface CardSongProps {
   position: number;
@@ -51,6 +52,7 @@ export const CardSong = ({
           <a href={song.link} target="_blank" rel="noreferrer">
             Ver completa
           </a>
+          <span>{song.duration_formatted}</span>
         </span>
       </BoxMain>
 

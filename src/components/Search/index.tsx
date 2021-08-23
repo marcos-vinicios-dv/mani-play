@@ -12,7 +12,7 @@ export const SearchBar = ({ onSearch }: SearchBarProps) => {
 
   useEffect(() => {
     inputSearch.current.addEventListener('keyup', (e) => {
-      if (e.key === 'Enter' && inputSearch.current.value !== '') {
+      if (e.key === 'Enter') {
         onSearch(inputSearch.current.value);
       }
     });
@@ -25,7 +25,7 @@ export const SearchBar = ({ onSearch }: SearchBarProps) => {
         type="text"
         placeholder="Álbum, Artista ou Título"
       />
-      <button type="button">
+      <button type="button" onClick={() => onSearch(inputSearch.current.value)}>
         <BiSearch />
       </button>
     </SearchContainer>

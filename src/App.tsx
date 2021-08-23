@@ -1,9 +1,9 @@
 import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import GlobalStyles from './styles/global';
 import { SideBar } from './components/SideBar';
 import { Routes } from './router/routes';
-import { Provider } from 'react-redux';
 import { store } from './store';
 import { Header } from './components/Header';
 

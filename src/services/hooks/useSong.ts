@@ -56,18 +56,6 @@ export const useSong = (): useSongData => {
     }
   }, [songs]);
 
-  // PROBLEMA AO PESQUISAR ENQUANTO OUVE
-  useEffect(() => {
-    // audioRef.current.currentTime = 0;
-    // audioRef.current.addEventListener('timeupdate', () => {
-    //   const currentTime = audioRef.current.currentTime;
-    //   if (currentTime === audioRef.current.duration) {
-    //     setIsPlaying(false);
-    //   }
-    // });
-    // return () => audioRef.current.removeEventListener('timeupdate', () => {});
-  }, []);
-
   const handleAddSongToFavorite = useCallback(
     (song) => {
       dispatch(addSongToFavorite(song));

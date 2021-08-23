@@ -44,29 +44,33 @@ export const useHome = (): useHomeData => {
 
   const handleSearch = useCallback(
     async (value: string) => {
-      try {
-        setIsLoading(true);
-        setNextPageIndex('0');
-        const { dataFormatted, total, next } = await getSongsBySearch(
-          value,
-          '0'
-        );
+      if (value !== '') {
+        try {
+          setIsLoading(true);
+          setNextPageIndex('0');
+          const { dataFormatted, total, next } = await getSongsBySearch(
+            value,
+            '0'
+          );
 
-        if (!!dataFormatted.length) {
-          setTotalPlaylist(total);
-          setPlaylist(dataFormatted);
-          setSearchingFor(`Resultados da busca por "${value}"`);
-          setIsLoading(false);
+          if (!!dataFormatted.length) {
+            setTotalPlaylist(total);
+            setPlaylist(dataFormatted);
+            setSearchingFor(`Resultados da busca por "${value}"`);
+            setIsLoading(false);
 
-          !!next && setNextPageIndex(next);
-        } else {
-          setPlaylist([]);
-          setTotalPlaylist(0);
-          setIsLoading(false);
+            !!next && setNextPageIndex(next);
+          } else {
+            setPlaylist([]);
+            setTotalPlaylist(0);
+            setIsLoading(false);
+          }
+        } catch {
+          setSearchingFor(`Nada foi encontrado`);
+          console.log(`Erro ao fazer a busca!`);
         }
-      } catch {
-        setSearchingFor(`Nada foi encontrado`);
-        console.log(`Erro ao fazer a busca!`);
+      } else {
+        return;
       }
     },
     [getSongsBySearch]

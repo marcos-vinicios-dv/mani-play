@@ -1,11 +1,11 @@
 import { useState } from 'react';
-
 import ClipLoader from 'react-spinners/ClipLoader';
 
 import { CardSong } from '../../components/CardSong';
 import { InfiniteScroll } from '../../components/infiniteScroll';
 import { SearchBar } from '../../components/Search';
 import { useHome } from '../../services/hooks/useHome';
+
 import { Container } from './styles';
 
 export const Home = () => {

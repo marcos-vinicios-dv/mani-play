@@ -52,9 +52,9 @@ export const Container = styled.nav`
   }
 `;
 
-type RouterLinkProps = {
+interface RouterLinkProps {
   active: number;
-};
+}
 
 export const RouterLink = styled(Link)<RouterLinkProps>`
   font: 500 1.2rem 'Poppins';
