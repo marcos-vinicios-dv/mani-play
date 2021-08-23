@@ -132,19 +132,26 @@ export const BoxSub = styled.div`
   color: var(--gray-400);
 
   position: relative;
-
   display: flex;
+
+  span {
+    text-align: center;
+  }
 
   span:first-child {
     flex: 1;
     margin-right: 1rem;
   }
 
-  button svg {
-    color: var(--gray-400);
-    width: 24px;
-    height: 24px;
-    transition: 0.3s ease;
+  button {
+    margin-left: 4rem;
+
+    svg {
+      color: var(--gray-400);
+      width: 24px;
+      height: 24px;
+      transition: 0.3s ease;
+    }
   }
 
   &:hover {
