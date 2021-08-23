@@ -9,12 +9,12 @@
 
 - Home:
 <img width="100%" src="https://ik.imagekit.io/wgluqxvtial/maniplay_xAx0o7xeyUJ.png?updatedAt=1629717738287" alt="Página Home"></img>
-    - SideBar
-    <p>Esse componente possibilita a navegação do usuário entre as páginas disponiveis até o momento.</p><br>
-    - SearchBar:
-    <p>Na barra de pesquisa o usuário pode buscar musicas fintradas por "Artista, Álbum ou título da música", basta pressionar a tecla "Enter" ou clicar no botão de peasquisar no fim da barra.</p><br>
-    - Listagem de musicas:
-    <p>As músicas pesquisadas ou listadas inicialmente são exibidas em formato de cards, onde cada card possui algumas informações como posição da música na lista, imagem do álbum o qual pertence, título da música, um link para ver a vesão completa da música, tempo de duração da musica completa, um botão player/pause e um botão para adicionar aos favoritos.</p><br>
+    - SideBar:<br>
+    É esse componente que possibilita a navegação do usuário entre as páginas disponiveis até o momento.<br>
+    - SearchBar:<br>
+    Na barra de pesquisa o usuário pode buscar musicas fintradas por "Artista, Álbum ou título da música", basta pressionar a tecla "Enter" ou clicar no botão de peasquisar no fim da barra.<br>
+    - Listagem de musicas:<br>
+    As músicas pesquisadas ou listadas inicialmente são exibidas em formato de cards, onde cada card possui algumas informações como posição da música na lista, imagem do álbum o qual pertence, título da música, um link para ver a vesão completa da música, tempo de duração da musica completa, um botão player/pause e um botão para adicionar aos favoritos.<br>
 
 - Favoritos:
     <img width="100%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_23-04-27_VwThwjIyH.png?updatedAt=1629684293631" alt="Página de               favoritos">   </img>
