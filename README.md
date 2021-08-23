@@ -3,29 +3,25 @@
 <p>Esse projeto trata-se de um Webapp de pré-visualização de musicas utilizando a <a href="https://www.deezer.com/pt/">API</a> do <a href="https://developers.deezer.com/api">Deezer</a>, onde o usuário pode ouvir até 30 segundo de qualquer música disponível no Deezer assim como criar a própria playlist de favoritos.</p>
 
 
-<img width="100%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_22-10-39_6a7yd4WJeD.png?updatedAt=1629681389545" alt="Capa"></img>
+<img width="100%" src="https://ik.imagekit.io/wgluqxvtial/Capa_nDZ72Dz2-.png?updatedAt=1629717738065" alt="Capa"></img>
 
 ### Detalhes sobre a aplicação:
 
 - Home:
+<img width="100%" src="https://ik.imagekit.io/wgluqxvtial/maniplay_xAx0o7xeyUJ.png?updatedAt=1629717738287" alt="Página Home"></img>
     - SideBar
-    <img width="30%" height="30%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_22-14-24_RTGqye434.png?updatedAt=1629681389130" alt="Componente sidebar"></img>
     <p>Esse componente possibilita a navegação do usuário entre as páginas disponiveis até o momento.</p>
     <br><br>
-
     - SearchBar:
-    <img width="100%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_22-13-56_T18rxuu3m1v.png?updatedAt=1629681389340" alt="Componente de         pesquisa"></img>
     <p>Na barra de pesquisa o usuário pode buscar musicas fintradas por "Artista, Álbum ou título da música", basta pressionar a tecla "Enter" ou clicar no botão de peasquisar no fim da barra.</p>
     <br><br>
-
     - Listagem de musicas:
-    <img width="100%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_22-14-13_6gO3RCqCo.png?updatedAt=1629681389531" alt="Componente de           listgem"></img>
     <p>As músicas pesquisadas ou listadas inicialmente são exibidas em formato de cards, onde cada card possui algumas informações como posição da música na lista, imagem do álbum o qual pertence, título da música, um link para ver a vesão completa da música, tempo de duração da musica completa, um botão player/pause e um botão para adicionar aos favoritos.</p>
     <br><br>
 
 - Favoritos:
-    - Listagem de musicas na Playlist de favoritos:
     <img width="100%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_23-04-27_VwThwjIyH.png?updatedAt=1629684293631" alt="Página de               favoritos">   </img>
+    - Listagem de musicas na Playlist de favoritos:
     <p>A página de favoritos é semelhante à página Home porém não possui barra de pesquisa e nos cards de cada música a opção de adicionar aos favoritos está desabilitada e em seu lugar temos a opção de remover do carrinho.</p>
     <br><br>
     
@@ -35,7 +31,7 @@
 ### Tecnologias utilizadas:
 
 <b>Linguagem</b>
-- Typescript(React.
+- Typescript(React)
 
 <br>
 
@@ -52,23 +48,13 @@
 
 ## Como instalar na minha máquina?
 
-- Para iniciar esse app em sua máquina será necessário ter uma versão do node(LTS) instalada em sua máquina para poder rodar o projeto localmente, não se preocupe é bem simples para instalar, segue um link do site oficial:
-<br>
-<a href="https://nodejs.org/en/">Node</a>
-<br>
+- Para iniciar esse app em sua máquina será necessário ter uma versão do node(LTS) instalada em sua máquina para poder rodar o projeto localmente, não se preocupe é bem simples para instalar, segue um link do site oficial: [Node](https://nodejs.org/en/).
 - Com o node já instalado basta fazer um clone do projeto ou então baixar a versão zip, depois de ja ter feito o download(descompactado) ou clonado o projeto abra o terminal e navegue até a pasta do projeto e digite os seguintes códigos:
- ``` npm install ```
-Assim que o processo finalizar digite:
-``` cd node_modules/cors-anywhere/lib ```
-<br>
-``` npm run start ```
-<br>
-
-<p>Nessa etapa instalamos as dependencias do projeto e iniciamos uma biblioteca chamada "cors-anywhere" que nos ajuda a lidar com um pequeno problema de compatibilidade da API.</p>
-
-- Agora em outro terminal ou uma nova aba do mesmo, vamos iniciar a aplicação propriamente dita, siga o mesmo caminho que utilizou para chegar na pasta do projeto e utilize o seguinte comando:
-<br>
-``` npm run start ```
+    <br>``` npm install ```<br>
+    Assim que o processo finalizar digite:
+    <br> ``` cd node_modules/cors-anywhere/lib ``` ,seguido de ``` npm run start ``` <br>
+    <p>Nessa etapa instalamos as dependencias do projeto e iniciamos uma biblioteca chamada "cors-anywhere" que nos ajuda a lidar com um pequeno problema de compatibilidade da API.</p>
+- Agora em outro terminal ou uma nova aba do mesmo, vamos iniciar a aplicação propriamente dita, siga o mesmo caminho que utilizou para chegar na pasta do projeto e utilize o seguinte comando: ``` npm run start ```
 <br>
 Prontinho aproveite a experiência!!
 
