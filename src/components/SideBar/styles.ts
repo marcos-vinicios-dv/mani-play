@@ -23,7 +23,7 @@ export const SideContainer = styled.aside`
     padding: 1.3rem 2rem;
 
     img {
-      width: 130px;
+      width: 140px;
     }
   }
 

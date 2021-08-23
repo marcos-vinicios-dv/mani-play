@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-type CardContainerProps = {
+interface CardContainerProps {
   isPlaying: boolean;
-};
+}
 
 export const CardContainer = styled.li<CardContainerProps>`
   margin-top: 1rem;
@@ -67,11 +67,20 @@ export const CardContainer = styled.li<CardContainerProps>`
         }
       }
     `}
+
+  @media (max-width: 900px) {
+    padding: 1rem 2rem;
+
+    > span {
+      margin-right: 1rem;
+    }
+  }
 `;
 
 export const BoxMain = styled.div`
   width: 40%;
   display: flex;
+  align-items: center;
 
   span {
     margin-left: 2.15rem;
@@ -86,10 +95,34 @@ export const BoxMain = styled.div`
   }
 
   img {
-    max-width: 76px;
-    max-height: 76px;
+    width: 76px;
+    height: 76px;
 
     border-radius: 5px;
+  }
+
+  @media (max-width: 900px) {
+    width: 50%;
+    span {
+      margin-left: 1.7rem;
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      a {
+        font-size: 0.8rem;
+      }
+    }
+
+    img {
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: 80%;
   }
 `;
 
@@ -98,6 +131,8 @@ export const BoxSub = styled.div`
   font-weight: 600;
   color: var(--gray-400);
 
+  position: relative;
+
   display: flex;
 
   span:first-child {
@@ -105,22 +140,55 @@ export const BoxSub = styled.div`
     margin-right: 1rem;
   }
 
-  button {
-    background: none;
-    border: none;
-    margin-left: 6rem;
+  button svg {
+    color: var(--gray-400);
+    width: 24px;
+    height: 24px;
+    transition: 0.3s ease;
+  }
 
+  &:hover {
     svg {
-      color: var(--gray-400);
-      width: 24px;
-      height: 24px;
+      color: var(--pink);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    button {
+      margin-left: 3.75rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+
+    button svg {
+      width: 20px;
+      height: 20px;
       transition: 0.3s ease;
     }
+  }
 
-    &:hover {
-      svg {
-        color: var(--pink);
-      }
+  @media (max-width: 600px) {
+    width: auto;
+    flex-direction: column;
+
+    span:first-child {
+      display: none;
+    }
+
+    span {
+      margin: 0.5rem 0;
+      order: 2;
+    }
+
+    button {
+      order: 3;
+      margin-left: 0;
+    }
+
+    button:last-child {
+      order: 1;
     }
   }
 `;

@@ -41,6 +41,7 @@ export const ResponsiveSideBar = styled.div<ResponsiveSideBarPros>`
   background-color: rgba(0, 0, 0, 0.2);
 
   aside {
+    width: 50%;
     max-width: 300px;
     height: 100vh;
 

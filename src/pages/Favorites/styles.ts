@@ -23,4 +23,22 @@ export const Container = styled.main`
   @media (min-width: 1420px) {
     width: 90%;
   }
+
+  @media (max-width: 1024px) {
+    h2 {
+      font-size: 1.35rem;
+    }
+
+    > span {
+      font-size: 0.8rem;
+    }
+
+    ul {
+      padding: 0.8rem 0;
+    }
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;

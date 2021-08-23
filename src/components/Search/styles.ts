@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const SearchContainer = styled.div`
-  max-width: 500px;
-  /* padding: 0.8rem 1.34rem; */
+  width: 500px;
 
   border: 2px solid var(--gray-200);
   border-radius: 30px;
@@ -18,7 +17,7 @@ export const SearchContainer = styled.div`
 
   input {
     flex: 1;
-    margin: 0 0 0 1.2rem;
+    margin: 0 0 0 1.35rem;
 
     background-color: transparent;
     border: none;
