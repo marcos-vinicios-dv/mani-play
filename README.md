@@ -9,24 +9,24 @@
 
 - Home:
     - SideBar
-    <img width="50%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_22-14-24_RTGqye434.png?updatedAt=1629681389130" alt="Componente sidebar">     </img>
-    Esse componente possibilita a navegação do usuário entre as páginas disponiveis até o momento.
+    <img width="30%" height="40%"src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_22-14-24_RTGqye434.png?updatedAt=1629681389130" alt="Componente sidebar"></img>
+    <p>Esse componente possibilita a navegação do usuário entre as páginas disponiveis até o momento.</p>
     <br><br>
 
     - SearchBar:
     <img width="100%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_22-13-56_T18rxuu3m1v.png?updatedAt=1629681389340" alt="Componente de         pesquisa"></img>
-    Na barra de pesquisa o usuário pode buscar musicas fintradas por "Artista, Álbum ou título da música", basta pressionar a tecla "Enter" ou clicar no botão de peasquisar no fim da barra.
+    <p>Na barra de pesquisa o usuário pode buscar musicas fintradas por "Artista, Álbum ou título da música", basta pressionar a tecla "Enter" ou clicar no botão de peasquisar no fim da barra.</p>
     <br><br>
 
     - Listagem de musicas:
     <img width="100%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_22-14-13_6gO3RCqCo.png?updatedAt=1629681389531" alt="Componente de           listgem"></img>
-    As músicas pesquisadas ou listadas inicialmente são exibidas em formato de cards, onde cada card possui algumas informações como posição da música na lista, imagem do álbum o qual pertence, título da música, um link para ver a vesão completa da música, tempo de duração da musica completa, um botão player/pause e um botão para adicionar aos favoritos.
+    <p>As músicas pesquisadas ou listadas inicialmente são exibidas em formato de cards, onde cada card possui algumas informações como posição da música na lista, imagem do álbum o qual pertence, título da música, um link para ver a vesão completa da música, tempo de duração da musica completa, um botão player/pause e um botão para adicionar aos favoritos.</p>
     <br><br>
 
 - Favoritos:
     - Listagem de musicas na Playlist de favoritos:
     <img width="100%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_23-04-27_VwThwjIyH.png?updatedAt=1629684293631" alt="Página de               favoritos">   </img>
-    A página de favoritos é semelhante à página Home porém não possui barra de pesquisa e nos cards de cada música a opção de adicionar aos favoritos está desabilitada e em seu lugar temos a opção de remover do carrinho.
+    <p>A página de favoritos é semelhante à página Home porém não possui barra de pesquisa e nos cards de cada música a opção de adicionar aos favoritos está desabilitada e em seu lugar temos a opção de remover do carrinho.</p>
     <br><br>
     
 ### Link para o design do app:
@@ -58,23 +58,23 @@
 <br><br>
 - Com o node já instalado basta fazer um clone do projeto ou então baixar a versão zip, depois de ja ter feito o download(descompactado) ou clonado o projeto abra o terminal e navegue até a pasta do projeto e digite os seguintes códigos:
 <br>
- ```npm install```
+ ``` npm install ```
 <br>
 Assim que o processo finalizar digite:
 <br>
-```cd node_modules/cors-anywhere/lib```
+``` cd node_modules/cors-anywhere/lib ```
 <br>
-```npm run start```
+``` npm run start ```
 <br>
 
-Nessa etapa instalamos as dependencias do projeto e iniciamos uma biblioteca chamada "cors-anywhere" que nos ajuda a lidar com um pequeno problema de compatibilidade da API.
+<p>Nessa etapa instalamos as dependencias do projeto e iniciamos uma biblioteca chamada "cors-anywhere" que nos ajuda a lidar com um pequeno problema de compatibilidade da API.</p>
 
 - Agora em outro terminal ou uma nova aba do mesmo, vamos iniciar a aplicação propriamente dita, siga o mesmo caminho que utilizou para chegar na pasta do projeto e utilize o seguinte comando:
 <br>
-```npm run start```
+``` npm run start ```
 <br>
 Prontinho aproveite a experiência!!
 
 ##Atenção!
-O site é responsivo porém seu design não foi feito previamete construido no figma e está sujeita a mudar, foi algo feito apenas para que não quebre em telas menores.
+<p>O site é responsivo porém seu design não foi feito previamete construido no figma e está sujeita a mudar, foi algo feito apenas para que não quebre em telas menores.</p>
 
