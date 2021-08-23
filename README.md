@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+## Maniplay
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>Esse projeto trata-se de um Webapp de pré-visualização de musicas utilizando a <a href="https://www.deezer.com/pt/">API</a> do <a href="https://developers.deezer.com/api">Deezer</a>, onde o usuário pode ouvir até 30 segundo de qualquer música disponível no Deezer assim como criar a própria playlist de favoritos.</p>
 
-## Available Scripts
 
-In the project directory, you can run:
+<img width="100%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_22-10-39_6a7yd4WJeD.png?updatedAt=1629681389545" alt="Capa"></img>
 
-### `yarn start`
+### Detalhes sobre a aplicação:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Home:
+    - SideBar
+    <img width="50%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_22-14-24_RTGqye434.png?updatedAt=1629681389130" alt="Componente sidebar">     </img>
+    Esse componente possibilita a navegação do usuário entre as páginas disponiveis até o momento.
+    <br><br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    - SearchBar:
+    <img width="100%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_22-13-56_T18rxuu3m1v.png?updatedAt=1629681389340" alt="Componente de         pesquisa"></img>
+    Na barra de pesquisa o usuário pode buscar musicas fintradas por "Artista, Álbum ou título da música", basta pressionar a tecla "Enter" ou clicar no botão de peasquisar no fim da barra.
+    <br><br>
 
-### `yarn test`
+    - Listagem de musicas:
+    <img width="100%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_22-14-13_6gO3RCqCo.png?updatedAt=1629681389531" alt="Componente de           listgem"></img>
+    As músicas pesquisadas ou listadas inicialmente são exibidas em formato de cards, onde cada card possui algumas informações como posição da música na lista, imagem do álbum o qual pertence, título da música, um link para ver a vesão completa da música, tempo de duração da musica completa, um botão player/pause e um botão para adicionar aos favoritos.
+    <br><br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Favoritos:
+    - Listagem de musicas na Playlist de favoritos:
+    <img width="100%" src="https://ik.imagekit.io/wgluqxvtial/Captura_de_tela_de_2021-08-22_23-04-27_VwThwjIyH.png?updatedAt=1629684293631" alt="Página de               favoritos">   </img>
+    A página de favoritos é semelhante à página Home porém não possui barra de pesquisa e nos cards de cada música a opção de adicionar aos favoritos está desabilitada e em seu lugar temos a opção de remover do carrinho.
+    <br><br>
+    
+### Link para o design do app:
+  <a href="https://www.figma.com/file/Ri2VtETzTqxhLqqj6ZuDNg/ManiPlay?node-id=0%3A1">Figma</a>
 
-### `yarn build`
+### Tecnologias utilizadas:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<b>Linguagem</b>
+- Typescript(React.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<b>Bibliotecas</b>
+- <a href="https://axios-http.com/docs/intro" >axios</a> (requisições a api);
+- <a href="https://redux.js.org/" >redux</a> (gerenciamente de estado compartilhado);
+- <a href="https://styled-components.com/" >styled-components</a> (estilização);
+- <a href="https://reactrouter.com/web/guides/quick-start" >react-router-dom</a> (gerencimento de rotas);
+- <a href="https://react-icons.github.io/react-icons" >react-icons</a> (pacote de icones);
+- <a href="https://www.davidhu.io/react-spinners/" >react-spinners</a> (spinners de carregamento);
+  <a href="https://immerjs.github.io/immer/" >immer</a> (manipulação de estados imutáveis).
 
-### `yarn eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Como instalar na minha máquina?
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Para iniciar esse app em sua máquina será necessário ter uma versão do node(LTS) instalada em sua máquina para poder rodar o projeto localmente, não se preocupe é bem simples para instalar, segue um link do site oficial:
+<br>
+<a href="https://nodejs.org/en/">Node</a>
+<br><br>
+- Com o node já instalado basta fazer um clone do projeto ou então baixar a versão zip, depois de ja ter feito o download(descompactado) ou clonado o projeto abra o terminal e navegue até a pasta do projeto e digite os seguintes códigos:
+<br>
+ ```npm install```
+<br>
+Assim que o processo finalizar digite:
+<br>
+```cd node_modules/cors-anywhere/lib```
+<br>
+```npm run start```
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Nessa etapa instalamos as dependencias do projeto e iniciamos uma biblioteca chamada "cors-anywhere" que nos ajuda a lidar com um pequeno problema de compatibilidade da API.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Agora em outro terminal ou uma nova aba do mesmo, vamos iniciar a aplicação propriamente dita, siga o mesmo caminho que utilizou para chegar na pasta do projeto e utilize o seguinte comando:
+<br>
+```npm run start```
+<br>
+Prontinho aproveite a experiência!!
 
-## Learn More
+##Atenção!
+O site é responsivo porém seu design não foi feito previamete construido no figma e está sujeita a mudar, foi algo feito apenas para que não quebre em telas menores.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
