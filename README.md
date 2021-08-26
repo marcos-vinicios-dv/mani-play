@@ -48,7 +48,7 @@
 - Com o node já instalado basta fazer um clone do projeto ou então baixar a versão zip, depois de ja ter feito o download(descompactado) ou clonado o projeto abra o terminal e navegue até a pasta do projeto e digite os seguintes códigos:
     <br>``` npm install ```<br>
     Assim que o processo finalizar digite:
-    <br> ``` cd node_modules/cors-anywhere/lib ``` , seguido de ``` npm run start ``` <br>
+    <br> ``` cd node_modules/cors-anywhere/lib ``` , seguido de ``` npm run start ```  (se estiver no windows inverta as barras)<br>
     <p>Nessa etapa instalamos as dependencias do projeto e iniciamos uma biblioteca chamada "cors-anywhere" que nos ajuda a lidar com um pequeno problema de compatibilidade da API.</p><br>
 - Agora em outro terminal ou uma nova aba do mesmo, vamos iniciar a aplicação propriamente dita, siga o mesmo caminho que utilizou para chegar na pasta do projeto e execute o seguinte comando, ele automaticamente irá iniciar o app e abrir uma aba no seu navegador, mas caso não abra você mesmo deve abrir, copie o link gerado pelo código quando o executou (geralmente é "http://localhost:3000") e coloque em seu navegador:
 <br>``` npm run start ```<br><br>
